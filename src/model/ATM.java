@@ -11,4 +11,14 @@ public class ATM {
         this.bankName = bankName;
         this.location = location;
     }
+
+    public void processWithdrawal(Account account, double amount) {
+
+        System.out.println("Processing withdrawal from ATM...");
+        account.withdraw(amount);
+    }
+
+    public void printReceipt() {
+        System.out.println("Transaction completed successfully.");
+    }
 }

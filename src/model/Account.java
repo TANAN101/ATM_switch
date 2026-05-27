@@ -24,6 +24,10 @@ public class Account {
     public String getbankName(){
         return bankName;
     }
-
-    
+    public void setownerName(String ownerName){
+        this.ownerName = ownerName;
+    }
+    public void setbankName(String bankName){
+        this.bankName = bankName;
+    }
 }

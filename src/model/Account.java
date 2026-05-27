@@ -32,7 +32,8 @@ public class Account {
     }
     //withdrawal
     public void withdraw(double amount){
-        if (amount > 0 && amount > Balance){
+         
+        if (amount > 0 && Balance - amount >= 100){
             Balance = Balance - amount;
             System.out.println("Withdrawal successful.");
         }else{
@@ -40,7 +41,16 @@ public class Account {
         }
 
     }
-    
+    public void withdraw(double amount, double fee){
+        double total = amount + fee;
+
+        if (total > Balance ){
+            Balance = Balance - total;
+            System.out.println("Withdrawal successful with fee.");
+        }else{
+            System.out.println("Insufficient balance or invalid amount.");
+        }
+    }
 }
 
 

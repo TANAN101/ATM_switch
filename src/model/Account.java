@@ -30,4 +30,17 @@ public class Account {
     public void setbankName(String bankName){
         this.bankName = bankName;
     }
+    //withdrawal
+    public void withdraw(double amount){
+        if (amount > 0 && amount > Balance){
+            Balance = Balance - amount;
+            System.out.println("Withdrawal successful.");
+        }else{
+            System.out.println("Insufficient balance or invalid amount.");
+        }
+
+    }
+    
 }
+
+

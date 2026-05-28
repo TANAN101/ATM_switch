@@ -1,4 +1,4 @@
-package app;
+
 
 import model.*;
 import service.ATMSwitch;
@@ -31,7 +31,7 @@ public class Main {
                 "Bole"
         );
 
-        EthSwitch switchSystem = new EthSwitch();
+        ATMSwitch switchSystem = new ATMSwitch();
 
         switchSystem.validateTransaction(account1, 2000);
 

@@ -44,7 +44,7 @@ public class Account {
     public void withdraw(double amount, double fee){
         double total = amount + fee;
 
-        if (total > Balance ){
+        if (total < Balance && Balance - total >= 100 ){
             Balance = Balance - total;
             System.out.println("Withdrawal successful with fee.");
         }else{
@@ -53,15 +53,16 @@ public class Account {
     }
     //checking balance
     public void checkBalance(){
-        System.out.println("Current Balance: " + Balance + "birr");
+        System.out.println("Current Balance: " + Balance + " birr");
     }
+    //temorary check
      public static void main(String[] args) {
         Account acc = new Account("201", "abdi", 1000, "CBE BANK");
-        System.out.println(acc.Balance);
+       
+        acc.withdraw(700);
 
-        acc.withdraw(920);
-
-        System.out.println(acc.Balance);
+        acc.checkBalance();
+       
 }
 
 }

@@ -1,7 +1,7 @@
 package app;
 
 import model.*;
-import service.EthSwitch;
+import service.ATMSwitch;
 
 public class Main {
 

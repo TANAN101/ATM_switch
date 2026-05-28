@@ -6,7 +6,7 @@
 
 # 📌 Project Overview
 
-Mini EthSwitch ATM Network is a Java-based console application inspired by the real-world Ethiopian interbank switching system, EthSwitch.
+ATMswitch Network is a Java-based console application inspired by the real-world Ethiopian interbank switching system, EthSwitch.
 
 The project simulates how users can access their bank accounts from different bank ATMs through a shared switch system.
 
@@ -17,8 +17,8 @@ Instead, the customer uses an Abyssinia Bank ATM.
 
 The ATM:
 
-1. Sends the request to the EthSwitch system
-2. EthSwitch routes the request to the correct bank account
+1. Sends the request to the ATM system
+2. ATMswitch routes the request to the correct bank account
 3. The bank account validates the withdrawal rules
 4. The transaction is approved or rejected
 
@@ -99,7 +99,7 @@ The system models real-world banking entities using classes such as:
 
 * Account
 * ATM
-* EthSwitch
+* ATMswitch
 * Bank
 
 Objects are created to simulate real transactions.
@@ -209,17 +209,17 @@ The project is organized into packages for better structure and readability.
 
 ---
 
-# 🔄 EthSwitch System Flow
+# 🔄 ATMswitch System Flow
 
 ```text
-ATM → EthSwitch → Bank Account
+ATM → ATMswitch → Bank Account
 ```
 
 ### Transaction Process
 
 1. User enters withdrawal amount
 2. ATM sends request to EthSwitch
-3. EthSwitch routes request to correct account
+3. ATMswitch routes request to correct account
 4. Account checks:
 
    * sufficient balance
@@ -245,7 +245,7 @@ src/
 │   ├── ATM.java
 │   ├── CBEBankATM.java
 │   ├── AbyssiniaBankATM.java
-│   └── EthSwitch.java
+│   └── ATMswitch.java
 │
 └── app/
     └── Main.java

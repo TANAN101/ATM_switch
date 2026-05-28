@@ -16,7 +16,7 @@ public class Main {
 
         BusinessAccount account2 = new BusinessAccount(
                 "2001",
-                "Nathan",
+                "TANAN",
                 50000,
                 "Dashen Bank"
         );

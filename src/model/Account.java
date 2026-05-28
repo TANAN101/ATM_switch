@@ -55,6 +55,13 @@ public class Account {
     public void checkBalance(){
         System.out.println("Current Balance: " + Balance + "birr");
     }
+     public static void main(String[] args) {
+        Account acc = new Account("201", "abdi", 1000, "CBE BANK");
+        System.out.println(acc.Balance);
+
+        acc.withdraw(905);
+
+        System.out.println(acc.Balance);
 }
 
-
+}

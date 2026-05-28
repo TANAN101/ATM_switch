@@ -1,4 +1,4 @@
-# 🏦 Mini EthSwitch ATM Network
+# 🏦 ATMSwitch ATM Network
 
 ### Console-Based Interbank ATM Transaction System
 

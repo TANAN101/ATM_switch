@@ -51,6 +51,10 @@ public class Account {
             System.out.println("Insufficient balance or invalid amount.");
         }
     }
+    //checking balance
+    public void checkBalance(){
+        System.out.println("Current Balance: " + Balance + "birr");
+    }
 }
 
 

@@ -33,13 +33,15 @@ public class Main {
 
         ATMSwitch switchSystem = new ATMSwitch();
 
-        switchSystem.validateTransaction(account1, 2000);
-
         switchSystem.routeTransaction(
                 abyssiniaATM,
                 account1,
                 2000
         );
+        
+        switchSystem.validateTransaction(account1, 2000);
+
+        
 
         account1.checkBalance();
 

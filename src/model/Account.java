@@ -59,7 +59,7 @@ public class Account {
         Account acc = new Account("201", "abdi", 1000, "CBE BANK");
         System.out.println(acc.Balance);
 
-        acc.withdraw(900);
+        acc.withdraw(920);
 
         System.out.println(acc.Balance);
 }

@@ -7,12 +7,12 @@ public class BusinessAccount extends Account {
 
     }
     @Override
-    public void withdraw(double amount){
+    public void withdraw(double amount, double fee){
          
         if (amount > 20000){
             System.out.println("Business Account withdrawal limit is 20000.");
         }else{
-            super.withdraw(amount); 
+            super.withdraw(amount, fee); 
         }
 }
 }

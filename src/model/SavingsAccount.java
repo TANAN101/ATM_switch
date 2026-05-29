@@ -6,11 +6,11 @@ public class SavingsAccount extends Account {
 
     }
     @Override
-    public void withdraw(double amount){
+    public void withdraw(double amount, double fee){
         if (amount > 5000){
             System.out.println("Withdraw Limit for Savings is 5000!");
         } else{
-            super.withdraw(amount);
+            super.withdraw(amount, fee);
         }
     }
 

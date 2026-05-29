@@ -8,7 +8,7 @@ public class Main {
         SavingsAccount account1 = new SavingsAccount(
                 "1001",
                 "Amen",
-                1000,
+                10000,
                 "Commercial Bank"
         );
 
@@ -36,7 +36,7 @@ public class Main {
                 2000
         );
 
-        switchSystem.validateTransaction(account1, 200);
+        switchSystem.validateTransaction(account1, 2000);
 
         
 
@@ -44,14 +44,14 @@ public class Main {
 
         Transaction transaction = new Transaction(
                 "TXN001",
-                200,
+                2000,
                 "Withdrawal"
                 
         );
         
 
         transaction.displayTransactionDetails();
-        transaction.checkstatus(account1, 200);
+        transaction.checkstatus(account1, 2000);
         
     }
 }

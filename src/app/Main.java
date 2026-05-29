@@ -1,3 +1,7 @@
+
+
+import java.util.Scanner;
+
 import model.*;
 import service.ATMswitch;
 
@@ -5,54 +9,66 @@ public class Main {
 
     public static void main(String[] args) {
 
-        SavingsAccount account1 = new SavingsAccount(
-                "1001",
-                "Amen",
-                10000,
-                "Commercial Bank"
-        );
+        Scanner take = new Scanner(System.in);
 
-        BusinessAccount account2 = new BusinessAccount(
-                "2001",
-                "TANAN",
-                50000,
-                "Dashen Bank"
-        );
+        System.out.println("===== ATM SWITCH SYSTEM =====");
 
-        ATM cbeATM = new CBEBankATM(
-                "ATM-CBE-01",
-                "Addis Ababa"
-        );
+        System.out.println("Choose Account Type:");
+        System.out.println("1. Savings Account");
+        System.out.println("2. Business Account");
+
+        int choice = take.nextInt();
+
+        Account account;
+
+        if(choice == 1){
+
+            account = new SavingsAccount(
+                    "1001",
+                    "Amen",
+                    10000,
+                    "Commercial Bank"
+            );
+
+        }else{
+
+            account = new BusinessAccount(
+                    "2001",
+                    "TANAN",
+                    50000,
+                    "Dashen Bank"
+            );
+        }
 
         ATM abyssiniaATM = new AbyssiniaATM(
                 "ATM-ABY-01",
                 "Bole"
         );
+
+        System.out.print("Enter withdrawal amount: ");
+
+        double amount = take.nextDouble();
+
         ATMswitch switchSystem = new ATMswitch();
-        
+
+        switchSystem.validateTransaction(account, amount);
+
         switchSystem.routeTransaction(
                 abyssiniaATM,
-                account1,
-                2000
+                account,
+                amount
         );
 
-        switchSystem.validateTransaction(account1, 2000);
-
-        
-
-        account1.checkBalance();
+        account.checkBalance();
 
         Transaction transaction = new Transaction(
                 "TXN001",
-                2000,
+                amount,
                 "Withdrawal"
-                
         );
-        
 
-        transaction.displayTransactionDetails();
-        transaction.checkstatus(account1, 2000);
-        
+        transaction.displayTransactionDetails(account);
+
+        take.close();
     }
 }
-
